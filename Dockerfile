@@ -47,6 +47,8 @@ RUN yum clean -y all && \
     bash install-nexo.sh /usr/local/py3.7 nexo-python-env.yml && \
     chgrp -R nexo-py /usr/local/py3.7 && \
     chmod -R g+s /usr/local/py3.7 && \
+    echo -e "source /usr/local/py3.7/etc/profile.d/conda.sh\nconda activate nexo\n" > /usr/local/py3.7/setup-nexo-py.sh && \
+    chmod ugo+x /usr/local/py3.7/setup-nexo-py.sh && \
     cd /tmp && \
     rm -Rf nexo-python
     
@@ -54,4 +56,4 @@ USER nexo-py
 ENV HDF5_USE_FILE_LOCKING FALSE
 ENV PYTHONSTARTUP ''
 
-ENTRYPOINT ["source", "/usr/local/py3.7/etc/profile.d/conda.sh"]
+ENTRYPOINT ["/usr/local/py3.7/setup-nexo-py.sh"]
