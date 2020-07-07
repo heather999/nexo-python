@@ -42,7 +42,7 @@ RUN yum clean -y all && \
     rm -rf /var/cache/yum && \
     groupadd -g 1000 -r nexo-py && useradd -u 1000 --no-log-init -m -r -g nexo-py nexo-py && \
     cd /tmp && \
-    git clone https://github.com/LSSTDESC/nexo-python && \
+    git clone https://github.com/heather999/nexo-python && \
     cd nexo-python/conda && \
     bash install-nexo.sh /usr/local/py3.7 nexo-python-env.yml && \
     cd /tmp && \
