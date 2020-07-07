@@ -1,0 +1,39 @@
+name: nexo
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - bokeh
+  - cmake
+  - corner
+  - dask
+  - datashader 
+  - fastparquet
+  - flake8
+  - google-cloud-bigquery  
+  - graphviz
+  - gsl
+  - h5py
+  - hdf5
+  - healpy
+  - holoviews
+  - ipympl
+  - jupyter
+  - markupsafe
+  - matplotlib
+  - nose
+  - numba
+  - numpy
+  - pandas
+  - pip  
+  - pyarrow
+  - pybind11
+  - pytest
+  - scikit-image
+  - scikit-learn
+  - scipy
+  - sphinx
+  - tabulate
+  - tensorflow
+  - yaml
+  - pip:
