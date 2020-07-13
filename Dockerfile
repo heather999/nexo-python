@@ -47,7 +47,7 @@ RUN yum clean -y all && \
     bash install-nexo.sh /usr/local/py3.7 nexo-python-env.yml && \
     chgrp -R nexo-py /usr/local/py3.7 && \
     chmod -R g+s /usr/local/py3.7 && \
-    echo -e "source /usr/local/py3.7/etc/profile.d/conda.sh\nconda activate nexo\n" > /usr/local/py3.7/setup-nexo-py.sh && \
+    echo -e "\#\!/bin/bash\nset -e\nsource /usr/local/py3.7/etc/profile.d/conda.sh\nconda activate nexo\nexec \"$@\"\n" > /usr/local/py3.7/setup-nexo-py.sh && \
     chmod ugo+x /usr/local/py3.7/setup-nexo-py.sh && \
     cd /tmp && \
     rm -Rf nexo-python
