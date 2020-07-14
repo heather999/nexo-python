@@ -57,3 +57,4 @@ ENV HDF5_USE_FILE_LOCKING FALSE
 ENV PYTHONSTARTUP ''
 
 ENTRYPOINT ["/usr/local/py3.7/setup-nexo-py.sh"]
+CMD ["/bin/bash"]
