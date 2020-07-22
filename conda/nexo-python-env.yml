@@ -29,6 +29,8 @@ dependencies:
   - pyarrow
   - pybind11
   - pytest
+  - root
+  - root_numpy
   - scikit-image
   - scikit-learn
   - scipy
@@ -37,3 +39,4 @@ dependencies:
   - tensorflow
   - yaml
   - pip:
+    - histlite
